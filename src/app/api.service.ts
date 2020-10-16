@@ -19,6 +19,10 @@ export class ApiService {
       return this.http.get<any>(this.apiUrl + 'crops/').pipe();
     }
 
+    searchCrops(cropName: string): Observable<any>{
+      return this.http.get<any>(this.apiUrl + `crops/?search=${cropName}`).pipe();
+    }
+
     login(userData: any): Observable<any>{
       return this.http.post<any>(this.apiUrl + 'users/login/', userData, this.headers).pipe();
     }
