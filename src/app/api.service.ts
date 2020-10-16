@@ -19,6 +19,10 @@ export class ApiService {
       return this.http.get<any>(this.apiUrl + 'crops/').pipe();
     }
 
+    getCropById(id: number): Observable<any>{
+      return this.http.get<any>(this.apiUrl + `crops/${id}/`).pipe();
+    }
+
     searchCrops(cropName: string): Observable<any>{
       return this.http.get<any>(this.apiUrl + `crops/?search=${cropName}`).pipe();
     }

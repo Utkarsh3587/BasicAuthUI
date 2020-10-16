@@ -1,12 +1,8 @@
-<div class="searchBar">
-  <mat-form-field floatLabel="never">
-    <input matInput placeholder="Search" (keyup)="searchCrops($event.target.value)">
-  </mat-form-field>
-</div>
-<div *ngFor="let crop of crops">
+<div *ngIf="crop">
   <mat-card>
     <h1><a routerLink="/crops/{{crop.id}}">{{crop.title}}</a></h1>
     <mat-card-subtitle>{{crop.created_at | date }}</mat-card-subtitle>
     <mat-card-content>{{crop.desc}}</mat-card-content>
   </mat-card>
 </div>
+<mat-spinner *ngIf="!crop"></mat-spinner>

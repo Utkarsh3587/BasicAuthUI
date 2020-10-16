@@ -4,7 +4,6 @@ import { Router } from '@angular/router';
 import { Validators, FormBuilder, FormGroup } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
 
-
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -14,7 +13,6 @@ import { ToastrService } from 'ngx-toastr';
 export class LoginComponent implements OnInit {
   public email: string;
   public password: string;
-  public isLoggedIn = false;
   public myForm: FormGroup;
 
   constructor(public router: Router, private toastr: ToastrService,
@@ -31,7 +29,6 @@ export class LoginComponent implements OnInit {
 
     this.apiService.login({ email: this.myForm.value.email, password: this.myForm.value.password }).subscribe(
       _ => {
-        this.isLoggedIn = true;
         this.router.navigate([`/crops`]);
         this.toastr.success('Login Successful');
       }, _ => {

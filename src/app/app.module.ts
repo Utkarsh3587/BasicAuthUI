@@ -1,3 +1,4 @@
+import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -12,14 +13,17 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { MyMaterialModule } from './material.module';
 import { CropComponent } from './crop/crop.component';
+import { CropDetailComponent } from './crop-detail/crop-detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    CropComponent
+    CropComponent,
+    CropDetailComponent
   ],
   imports: [
+    CommonModule,
     HttpClientModule,
     BrowserModule,
     FormsModule,

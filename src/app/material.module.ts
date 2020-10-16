@@ -18,17 +18,18 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatListModule } from '@angular/material/list';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { from } from 'rxjs';
 
 @NgModule({
 imports: [MatNativeDateModule, MatDatepickerModule, MatIconModule,
   MatButtonModule, MatCheckboxModule, MatToolbarModule, FormsModule, MatCardModule,
-  MatFormFieldModule, MatInputModule, MatListModule, MatRadioModule,],
+  MatFormFieldModule, MatInputModule, MatListModule, MatRadioModule, MatProgressSpinnerModule],
 
 exports: [MatNativeDateModule, FormsModule, MatDatepickerModule,
   MatIconModule, MatButtonModule, MatCheckboxModule, MatToolbarModule,
-  MatCardModule, MatFormFieldModule, MatInputModule, MatListModule, MatRadioModule,],
+  MatCardModule, MatFormFieldModule, MatInputModule, MatListModule, MatRadioModule, MatProgressSpinnerModule],
 
 })
 
